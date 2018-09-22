@@ -30,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /*
+    * To put icons on ActionBar
+    *
+    * Creating Searchview and Listening to Text Submit and Text Change
+    *
+    * */
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.search_menu, menu);
@@ -37,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         SearchManager searchManager = (SearchManager) getSystemService(SEARCH_SERVICE);
         searchView.setSearchableInfo(searchManager.getSearchableInfo(getComponentName()));
         searchView.setSubmitButtonEnabled(true);
+        //Listener for search Text
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String s) {
